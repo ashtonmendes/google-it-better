@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>google-it-better</title>
+    <style type="text/css">
+        body {
+            margin: 10px;
+            white-space: nowrap;
+            width: 550px;
+        }
+        
+        #query {
+            width: 500px;
+        }
+        
+        button {
+            color: white;
+            background-color: #3B5998;
+            padding: 5px 10px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+            border-color: #3B5998;
+        }
+        
+        label {
+            font-size: 15px;
+        }
+        
+        .priceTextBox {
+            width: 50px;
+        }
+        
+        .emptyTextBox {
+            border-color: red;
+            background-color: lightsalmon;
+        }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div align="center" id="searchDiv"> 
+        <h1>Google it better!</h1>
+        <input id="query" type="text" placeholder="The search query will be built here." />
+        <br/>
+        <button id="searchButton" type="button">Search</button>
+    </div>
+      <h2>Search social media</h2>
+      <label for="socialMediaEntity">What</label>
+      <input id="socialMediaEntity" type="text" placeholder="Manchester United" />
+      <label for="site">Where</label>
+      <input id="site" type="text" placeholder="twitter" />
+      <button id="socialMediaSearch" type="button">Add</button>
+      
+      <h2>Search for a price (dollars)</h2>
+      <label for="item">Item</label>
+      <input id="item" type="text" placeholder="camera" />
+      <label for="minPrice">Min price</label>
+      <input id="minPrice" type="text" placeholder="0" class="priceTextBox" />
+      <label for="maxPrice">Max price</label>
+      <input id="maxPrice" type="text" placeholder="400" class="priceTextBox" />
+      <button id="priceSearch" type="button">Add</button>
+      
+      <h2>Exact match (with wildcards)</h2>
+      <label for="phrase">Phrase</label>
+      <input id="phrase" type="text" placeholder="largest * in the world" />
+      <button id="exactSearch" type="button">Add</button>
+      
+      <h2>Search a particular site</h2>
+      <label for="entity">What</label>
+      <input id="entity" type="text" placeholder="Harry Potter series" />
+      <label for="website">Website</label>
+      <input id="website" type="text" placeholder="archive.org" />
+      <button id="websiteSearch" type="button">Add</button>
+      
+      <h2>Exclude from search</h2>
+      <label for="keywords">Keywords to exclude</label>
+      <input id="keywords" type="text" placeholder="keyword1 keyword2" />
+      <button id="excludeFromSearch" type="button">Add</button>
+  </body>
+</html>
